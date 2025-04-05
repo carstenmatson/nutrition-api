@@ -4,7 +4,7 @@ services:
     name: nutrition-api
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python server.py"
+    startCommand: "gunicorn server:app"
     plan: free
     envVars:
       - key: PORT
