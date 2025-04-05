@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: nutrition-api
+    env: python
+    buildCommand: "pip install -r nutrition-api/requirements.txt"
+    startCommand: "gunicorn server:app"
+    plan: free
+    build:
+      workingDir: nutrition-api
+    envVars:
+      - key: PORT
+        value: 10000
