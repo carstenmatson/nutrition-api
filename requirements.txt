@@ -1,0 +1,5 @@
+# nutrition-api/requirements.txt
+flask
+pytesseract
+opencv-python
+Pillow

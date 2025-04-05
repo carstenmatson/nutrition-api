@@ -1,0 +1,11 @@
+# nutrition-api/render.yaml
+services:
+  - type: web
+    name: nutrition-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python server.py"
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
