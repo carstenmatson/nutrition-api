@@ -1,11 +1,12 @@
-# nutrition-api/render.yaml
+# render.yaml
 services:
   - type: web
     name: nutrition-api
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn server:app"
+    startCommand: "gunicorn server:app"  # ✅ not app:app
     plan: free
     envVars:
       - key: PORT
         value: 10000
+
